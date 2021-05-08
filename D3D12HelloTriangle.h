@@ -12,6 +12,7 @@
 #pragma once
 
 #include "DXSample.h"
+#include <stdexcept>
 
 using namespace DirectX;
 
@@ -69,4 +70,8 @@ private:
 	void LoadAssets();
 	void PopulateCommandList();
 	void WaitForPreviousFrame();
+	void CheckRaytracingSupport();
+	virtual void OnKeyUp(UINT8 key);
+
+	bool m_raster = true;
 };
